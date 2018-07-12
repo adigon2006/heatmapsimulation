@@ -42,7 +42,7 @@
 
 
     // read data from json
-    d3.json('data.json', function(response){
+    d3.json('data2.json', function(response){
 
       // console.log(response);
 
@@ -62,7 +62,7 @@
 
     var maximumxvalue = d3.max(mydata,function(t){return t.probability});
     var x_elements = d3.set(data.map(function( item ) { return item.product; } )).values(),
-        y_elements = d3.set(data.map(function( item ) { return item.country; } )).values();
+        y_elements = d3.set(mydata.map(function( item ) { return item.country; } )).values();
 
     // var xScale = d3.scale.ordinal()
     //     .domain(x_elements)
